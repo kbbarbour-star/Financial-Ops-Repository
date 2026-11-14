@@ -1,0 +1,6 @@
+{
+  "name": "Meridian Financial ITSM & Knowledge Base",
+  "description": "ITIL v4 financial institution incident management workspace, 7-tab relational dataset explorer, live elapsed-calendar-time SLA tracker, and multi-tab CSV exporter.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
