@@ -22,6 +22,66 @@ An interactive ITIL v4 financial institution incident management workspace, 7-ta
 - **Relational Cross-Tab Inspector**: Click any table row or foreign-key ID (`Service ID`, `Group ID`, `User ID`, `SLA ID`, `KB Ref`, `Incident ID`) to traverse linked records in a slide-over detail drawer.
 - **Multi-Tab CSV & ZIP Export**: Download the active tab as an RFC 4180 `.csv` file or export all 7 tabs together in a single `.zip` archive (`Meridian_Financial_ITSM_7Tabs.zip`).
 
+## Data Architecture and Persistence
+
+### Data Storage
+
+Meridian Financial ITSM currently operates as a **client-side demonstration application** using predefined, fictional datasets stored in TypeScript source files.
+
+The application does not currently connect to a database, external data service, or persistent backend.
+
+### Dataset Management
+
+The application loads seven predefined datasets from the `src/data/` directory:
+
+| Dataset | Source File | Records |
+|---|---|---:|
+| Incidents and Activity | `incidentsAndActivity.ts` | 60 |
+| Users and Assignment Groups | `usersAndGroups.ts` | 60 |
+| Services | `services.ts` | 30 |
+| SLA Definitions | `slaDefinitions.ts` | 30 |
+| Knowledge Base | `knowledgeBase.ts` | 56 |
+| **Total** | | **236** |
+
+*Note: The source files combine certain datasets, but the application presents them as seven separate tabs.*
+
+### Application Behavior
+
+The current implementation supports:
+
+- Viewing and exploring predefined incident records.
+- Searching, filtering, and sorting dataset records.
+- Navigating relationships between incidents, services, users, assignment groups, SLAs, and knowledge-base records.
+- Calculating incident SLA status using elapsed calendar time (24x7).
+- Exporting individual datasets to CSV.
+- Exporting all seven datasets into a ZIP archive.
+
+### Persistence Limitations
+
+The current version does not support:
+
+- Creating or permanently modifying incident records.
+- Saving user-generated records.
+- Persisting changes between application sessions.
+- Database transactions or server-side data processing.
+- User authentication or role-based access control.
+
+Changes to the application's temporary interface state are not stored in a centralized data repository.
+
+### Future Development
+
+Database integration and persistent incident management capabilities may be introduced in a future development phase.
+
+Potential enhancements include:
+
+- Centralized relational database storage.
+- Incident creation and modification.
+- Persistent assignment and workflow management.
+- User authentication and role-based access control.
+- Audit history and activity tracking.
+
+**Demonstration Disclaimer:** All records and scenarios are fictional and intended exclusively for educational, development, and portfolio demonstration purposes. This application is not connected to an actual financial institution and should not be used to manage production incidents or real customer information.
+
 ## Local Development
 
 ```bash
