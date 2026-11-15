@@ -1,5 +1,7 @@
 # Meridian Financial ITSM & Knowledge Base
 
+This application uses entirely fictional data for educational and portfolio demonstration purposes. It does not represent an actual financial institution or contain real customer information.
+
 An interactive ITIL v4 financial institution incident management workspace, 7-tab relational dataset explorer (236 total records), live elapsed-calendar-time (`24x7`) SLA tracker, and multi-tab CSV/ZIP exporter.
 
 ## Dataset Structure
